@@ -1,0 +1,25 @@
+{
+  "name": "deltaventures",
+  "version": "1.0.0",
+  "description": "Transformamos empresas",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vhoyospoyato/deltaventures.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vhoyospoyato/deltaventures/issues"
+  },
+  "homepage": "https://github.com/vhoyospoyato/deltaventures#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14"
+  }
+}
