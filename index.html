@@ -3,26 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-lato: Lato light;
+        --color-green-main: oklch(0.3284 0.0497 190.94);
+        --color-light-green: oklch(0.8285 0.0111 204.11 / 20%);
+        --color-lime: oklch(0.8989 0.216874 121.5085);
+          }
+    </style>
     <title>Delta Ventures</title>
   </head>
-  <body class="flex flex-col text-white m-8 bg-stone-800">
-    <h1 class="text-3xl font-bold text-white text">Delta Ventures</h1>
-    <div class="text-white">
-      Sabemos que emprender puede ser retador. Nosotros nos encargamos de lo
-      aburrido para que tú puedas enfocarte en el propósito de tu empresa. La
-      experiencia será la clave de nuestro valor agregado
+  <body class="font-lato text-white m-3 bg-green-main">
+    <div id="inicio" class="">
+      <div class="flex flex-row gap-x-4 place-content-center">
+        <div> logo </div>
+        <nav id="menu" class="flex flex-row gap-x-4">
+          <a href="why" class="bg-green-main p-3 hover:bg-light-green hover:underline">Inicio</a>
+          <a class="bg-green-main p-3 hover:bg-light-green hover:underline">Delta Ventures</a>
+          <a class="bg-green-main p-3 hover:bg-light-green hover:underline">Servicio</a>
+          <a class="bg-green-main p-3 hover:bg-light-green hover:underline">Contacto</a>
+        </nav>
+      </div>
+      <h1 class="text-3xl font-bold">Delta Ventures</h1>
     </div>
-    <div>
-      Somos un equipo integrado en tu empresa. Nos dedicamos a la estructuración
-      y crecimiento de tu negocio, preparándolo para el futuro.
+    <div id="why" class="bg-light-green">
+      <p class="text-lg">
+        Sabemos que emprender puede ser retador. Nosotros nos encargamos de lo
+        aburrido para que tú puedas enfocarte en el propósito de tu empresa. La
+        experiencia será la clave de nuestro valor agregado
+      </p>
     </div>
-    <div>
-      <h2>Plan mensual de Back Office:</h3>
-      <ul>
+    <div id="how">
+      <p class="text-lg">
+        Somos un equipo integrado en tu empresa. Nos dedicamos a la estructuración
+        y crecimiento de tu negocio, preparándolo para el futuro.
+    </div>
+    <div id="what" class="bg-light-green">
+      <h2 class="text-lg font-bold text-center">Plan mensual de Back Office</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 place-items-center">
         <li>Legal</li>
         <li>Contailidad</li>
+        <li>RRHH</li>
+        <li>Operaciones (aud.)</li>
+        <li>Tecnología</li>
+        <li>Estrategia</li>
       </ul>
+      <p class="text-center">Nuestro equipo de profesionales con experiencia en cada área que se encargarán de hacer tu vida más fácil como empresario y ayudarte a llevar tu empresa a un nuevo nivel!</p>
     </div>
+    <div>FOOTER</div>
   </body>
 </html>
