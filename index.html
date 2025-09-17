@@ -14,6 +14,11 @@
       }
     </style>
     <title>Delta Ventures</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/dv-green-white-logo.svg"
+    />
   </head>
   <body class="font-lato text-white bg-green-main">
     <div id="inicio" class="w-screen">
@@ -24,17 +29,19 @@
             alt="Delta Ventures logo"
           />
         </div>
-        <div class="basis-19/20 absolute right-0">
-          <nav id="menu" class="flex flex-row gap-x-4">
-            <a
-              href="why"
-              class="bg-green-main p-3 hover:bg-light-green hover:underline"
+        <div class="basis-19/20 absolute right-5">
+          <nav id="menu" class="flex flex-row md:gap-x-4">
+            <a href="#inicio" class="p-3 hover:bg-light-green hover:underline"
               >Inicio</a
             >
-            <a class="bg-green-main p-3 hover:bg-light-green hover:underline"
+            <a
+              href="#why"
+              class="bg-green-main p-3 hover:bg-light-green hover:underline"
               >Delta Ventures</a
             >
-            <a class="bg-green-main p-3 hover:bg-light-green hover:underline"
+            <a
+              href="#what"
+              class="bg-green-main p-3 hover:bg-light-green hover:underline"
               >Servicio</a
             >
             <a class="bg-green-main p-3 hover:bg-light-green hover:underline"
@@ -43,43 +50,69 @@
           </nav>
         </div>
       </div>
-      <div class="box-border p-50">
+      <div id="inicio" class="flex flex-col items-center h-screen">
         <img
           src="assets/deltaventures-green-white.svg"
           alt="Delta Ventures"
-          class=""
+          class="object-center size-200"
         />
       </div>
     </div>
     <div id="why" class="bg-light-green p-10">
-      <p class="text-lg m-3">
+      <p class="text-xl text-center m-3">
         Sabemos que emprender puede ser retador. Nosotros nos encargamos de lo
         aburrido para que tú puedas enfocarte en el propósito de tu empresa. La
         experiencia será la clave de nuestro valor agregado
       </p>
     </div>
     <div id="how" class="p-10">
-      <p class="text-lg m-3">
+      <p class="text-xl text-center m-3">
         Somos un equipo integrado en tu empresa. Nos dedicamos a la
         estructuración y crecimiento de tu negocio, preparándolo para el futuro.
       </p>
     </div>
     <div id="what" class="bg-light-green p-10">
       <div class="m-3">
-        <p class="text-lg font-bold text-center">Plan mensual de Back Office</p>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 place-items-center">
-          <li class="bg-green-main box-border size-70 p-10 rounded-xl text-2xl">
-            Legal
-          </li>
-          <li class="bg-green-main p-30 rounded-xl text-2xl">Contailidad</li>
-          <li class="bg-green-main p-30 rounded-xl text-2xl">RRHH</li>
-          <li class="bg-green-main p-30 rounded-xl text-2xl">
-            Operaciones (aud.)
-          </li>
-          <li class="bg-green-main p-30 rounded-xl text-2xl">Tecnología</li>
-          <li class="bg-green-main p-30 rounded-xl text-2xl">Estrategia</li>
-        </ul>
-        <p class="text-center">
+        <p class="text-4xl font-bold text-center">
+          Plan mensual de Back Office
+        </p>
+        <br />
+        <div class="flex flex-col items-center">
+          <ul class="grid grid-cols-1  md:grid-cols-3 gap-10">
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              Legal
+            </li>
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              Contailidad
+            </li>
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              RRHH
+            </li>
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              Operaciones
+            </li>
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              Tecnología
+            </li>
+            <li
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+            >
+              Estrategia
+            </li>
+          </ul>
+        </div>
+        <br />
+        <p class="text-2xl text-center">
           Nuestro equipo de profesionales con experiencia en cada área que se
           encargarán de hacer tu vida más fácil como empresario y ayudarte a
           llevar tu empresa a un nuevo nivel!
