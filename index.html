@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,8 +21,10 @@
     />
   </head>
   <body class="font-lato text-white bg-green-main">
-    <div id="inicio" class="w-screen">
-      <div class="flex flex-row p-3 static items-center">
+    <div id="inicio" class="relative">
+      <div
+        class="flex flex-row fixed top-0 right-0 left-0 bg-green-main p-3 items-center"
+      >
         <div class="basis-1/20">
           <img
             src="/assets/dv-green-white-logo.svg"
@@ -34,17 +36,13 @@
             <a href="#inicio" class="p-3 hover:bg-light-green hover:underline"
               >Inicio</a
             >
-            <a
-              href="#why"
-              class="bg-green-main p-3 hover:bg-light-green hover:underline"
+            <a href="#why" class="p-3 hover:bg-light-green hover:underline"
               >Delta Ventures</a
             >
-            <a
-              href="#what"
-              class="bg-green-main p-3 hover:bg-light-green hover:underline"
+            <a href="#what" class="p-3 hover:bg-light-green hover:underline"
               >Servicio</a
             >
-            <a class="bg-green-main p-3 hover:bg-light-green hover:underline"
+            <a href="#contact" class="p-3 hover:bg-light-green hover:underline"
               >Contacto</a
             >
           </nav>
@@ -54,71 +52,165 @@
         <img
           src="assets/deltaventures-green-white.svg"
           alt="Delta Ventures"
-          class="object-center size-200"
+          class="size-200"
         />
       </div>
     </div>
-    <div id="why" class="bg-light-green p-10">
+    <div id="why" class="h-screen bg-light-green p-10">
       <p class="text-xl text-center m-3">
         Sabemos que emprender puede ser retador. Nosotros nos encargamos de lo
         aburrido para que tú puedas enfocarte en el propósito de tu empresa. La
         experiencia será la clave de nuestro valor agregado
       </p>
     </div>
-    <div id="how" class="p-10">
+    <div id="how" class="h-screen p-10">
       <p class="text-xl text-center m-3">
         Somos un equipo integrado en tu empresa. Nos dedicamos a la
         estructuración y crecimiento de tu negocio, preparándolo para el futuro.
       </p>
     </div>
-    <div id="what" class="bg-light-green p-10">
+    <div id="what" class="bg-light-green items-center p-10">
       <div class="m-3">
-        <p class="text-4xl font-bold text-center">
-          Plan mensual de Back Office
-        </p>
-        <br />
+        <div>
+          <p class="text-4xl font-bold text-center">
+            Plan mensual de Back Office
+          </p>
+          <br />
+        </div>
         <div class="flex flex-col items-center">
-          <ul class="grid grid-cols-1  md:grid-cols-3 gap-10">
+          <ul class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
               Legal
             </li>
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
-              Contailidad
+              Contabilidad
             </li>
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
               RRHH
             </li>
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
               Operaciones
             </li>
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
               Tecnología
             </li>
             <li
-              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl"
+              class="bg-green-main box-border flex flex-col items-center size-70 p-10 rounded-xl text-2xl shadow-md"
             >
               Estrategia
             </li>
           </ul>
         </div>
-        <br />
-        <p class="text-2xl text-center">
-          Nuestro equipo de profesionales con experiencia en cada área que se
-          encargarán de hacer tu vida más fácil como empresario y ayudarte a
-          llevar tu empresa a un nuevo nivel!
-        </p>
       </div>
     </div>
-    <div>FOOTER</div>
+    <div id="what" class="flex flex-col items-center p-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 md:w-5xl gap-5 place-items-center"
+      >
+        <div class="">
+          <span class="text-2xl align-middle">
+            Nuestro equipo de profesionales con experiencia en cada área que se
+            encargarán de hacer tu vida más fácil como empresario y ayudarte a
+            llevar tu empresa a un nuevo nivel!
+          </span>
+        </div>
+        <form
+          class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6"
+        >
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+            Cuentanos un poco de tu negocio
+          </h2>
+          <div>
+            <label
+              for="name"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Nombre completo</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-500 px-4 py-2"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Correo electronico</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-500 px-4 py-2"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="phone"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Nro. Telf</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-500 px-4 py-2"
+              placeholder="+34 600 000 000"
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >¿Cual
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              class="block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-500 px-4 py-2"
+              rows="3"
+              placeholder="Briefly describe your needs..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-2 px-4 bg-green-900 rounded-md font-semibold hover:bg-light-green transition"
+          >
+            Send Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="flex flex-row bg-light-green">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 md:w-5xl gap-5 place-items-center p-3"
+      >
+        <div class="">
+          <img
+            src="/assets/delta_ventures-white.svg"
+            alt="Delta Ventures logo"
+            class="size-50"
+          />
+        </div>
+        <div class="basis-2">Datos de contacto</div>
+        <div class="basis-3">RRSS</div>
+      </div>
+    </div>
   </body>
 </html>
