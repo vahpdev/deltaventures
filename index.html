@@ -6,11 +6,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --font-lato: Lato light;
+        --font-lato-light: "Lato", sans-serif;
         --color-green-main: oklch(0.3284 0.0497 190.94);
         --color-light-green: oklch(0.8285 0.0111 204.11 / 20%);
         --color-lime: oklch(0.8989 0.216874 121.5085);
         --color-orange: oklch(0.683 0.2091 36.11);
+      }
+      @font-face {
+        font-family: "Lato";
+        src: url("https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USSwaPGQ.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
       }
     </style>
     <title>Delta Ventures</title>
@@ -20,7 +28,7 @@
       href="assets/dv-green-white-logo.svg"
     />
   </head>
-  <body class="font-lato text-white bg-green-main">
+  <body class="font-lato-light text-white bg-green-main">
     <div id="inicio" class="relative">
       <div
         class="flex flex-row fixed top-0 right-0 left-0 bg-green-main p-3 items-center"
@@ -29,6 +37,7 @@
           <img
             src="/assets/dv-green-white-logo.svg"
             alt="Delta Ventures logo"
+            class=""
           />
         </div>
         <div class="basis-19/20 absolute right-5">
