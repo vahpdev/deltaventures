@@ -21,6 +21,10 @@
         font-display: swap;
       }
     </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Delta Ventures</title>
     <link
       rel="icon"
@@ -28,37 +32,129 @@
       href="assets/dv-green-white-logo.svg"
     />
   </head>
-  <body class="font-lato-light text-white bg-green-main">
-    <div id="inicio" class="relative">
-      <div
-        class="flex flex-row fixed top-0 right-0 left-0 bg-green-main p-3 items-center"
-      >
-        <div class="basis-1/20">
-          <img
-            src="/assets/dv-green-white-logo.svg"
-            alt="Delta Ventures logo"
-            class=""
-          />
-        </div>
-        <div class="basis-19/20 absolute right-5">
-          <nav id="menu" class="flex flex-row md:gap-x-4">
-            <a href="#inicio" class="p-3 hover:bg-light-green hover:underline"
-              >Inicio</a
+  <body class="font-light text-white bg-green-main">
+    <!-- Enhanced Navigation Bar -->
+    <nav
+      class="bg-green-main/95 backdrop-blur-sm fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#inicio" class="flex items-center">
+              <img
+                src="/assets/dv-green-white-logo.svg"
+                alt="Delta Ventures logo"
+                class="h-8 w-auto mr-3"
+              />
+
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#inicio"
+                class="text-white hover:text-lime px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                Inicio
+              </a>
+
+              <a
+                href="#what"
+                class="text-white/80 hover:text-lime px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                Servicio
+              </a>
+              <!-- CTA Button -->
+              <a
+                href="#contact"
+                class="bg-lime text-green-main px-6 py-2 rounded-full text-sm font-medium hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                Contáctanos
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-white/80 hover:text-white hover:bg-light-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime"
             >
-            <a href="#why" class="p-3 hover:bg-light-green hover:underline"
-              >Delta Ventures</a
-            >
-            <a href="#what" class="p-3 hover:bg-light-green hover:underline"
-              >Servicio</a
-            >
-            <a href="#contact" class="p-3 hover:bg-light-green hover:underline"
-              >Contacto</a
-            >
-          </nav>
+              <span class="sr-only">Abrir menú principal</span>
+              <!-- Menu icon -->
+              <svg
+                id="menu-icon"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!-- Close icon -->
+              <svg
+                id="close-icon"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- Mobile Navigation Menu -->
       <div
-        id="inicio"
+        id="mobile-menu"
+        class="hidden md:hidden "
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#inicio"
+            class="text-white hover:text-lime block px-3 py-2 text-base font-medium transition-colors duration-200"
+          >
+            Inicio
+          </a>
+          <a
+            href="#what"
+            class="text-white/80 hover:text-lime block px-3 py-2 text-base font-medium transition-colors duration-200"
+          >
+            Servicio
+          </a>
+          <div class="px-3 py-4">
+            <a
+              href="#contact"
+              class="w-full bg-lime text-green-main px-6 py-3 rounded-full text-sm font-medium hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md inline-block text-center"
+            >
+              Contáctanos
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content (adjusted for fixed navbar) -->
+    <div id="inicio" class="relative pt-16">
+      <div
+        id="inicio-content"
         class="flex flex-col place-items-center h-screen place-content-center p-10 md:p-60"
       >
         <img
@@ -68,6 +164,7 @@
         />
       </div>
     </div>
+
     <div id="why" class="bg-light-green p-10">
       <p class="text-xl text-center m-3">
         Sabemos que emprender puede ser retador. Nosotros nos encargamos de lo
@@ -79,6 +176,7 @@
         estructuración y crecimiento de tu negocio, preparándolo para el futuro.
       </p>
     </div>
+
     <div id="what" class="items-center p-10">
       <div class="m-3">
         <div>
@@ -125,6 +223,7 @@
         </div>
       </div>
     </div>
+
     <div
       id="contact"
       class="flex flex-col-reverse md:flex-col bg-light-green items-center p-10"
@@ -211,6 +310,7 @@
         </div>
       </div>
     </div>
+
     <div class="flex flex-col items-center">
       <div
         class="grid grid-cols-1 md:grid-cols-3 md:w-5xl gap-5 place-items-center p-3"
@@ -269,5 +369,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="index.js"></script>
   </body>
 </html>
