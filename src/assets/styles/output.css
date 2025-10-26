@@ -926,7 +926,7 @@
   font-style: normal;
   font-weight: 300 400 700;
   font-display: swap;
-  src: url("/src/assets/fonts/Fontspring-DEMO-arquitectastd-light.otf") format("opentype");
+  src: url("/src/assets/fonts/Arquitecta.otf ") format("opentype");
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -1134,13 +1134,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
