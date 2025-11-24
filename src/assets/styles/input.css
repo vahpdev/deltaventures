@@ -36,9 +36,8 @@
 @font-face {
   font-family: "Arquitecta";
   font-style: normal;
-  font-weight: 200 700;
   font-display: swap;
-  font-size: 20px;
+  font-weight: 400;
   /* use an absolute path from the site root so the file is served from /src/assets/fonts/ */
   src: url("/src/assets/fonts/Arquitecta.woff2") format("woff2");
 }

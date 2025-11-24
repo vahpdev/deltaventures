@@ -15,6 +15,7 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-lg: 32rem;
@@ -25,10 +26,14 @@
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -238,6 +243,9 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
@@ -280,9 +288,6 @@
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
-  }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -427,6 +432,12 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
   .bg-green-900 {
     background-color: var(--color-green-900);
   }
@@ -469,6 +480,9 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .p-16 {
+    padding: calc(var(--spacing) * 16);
+  }
   .p-20 {
     padding: calc(var(--spacing) * 20);
   }
@@ -496,17 +510,11 @@
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
-  .pt-16 {
-    padding-top: calc(var(--spacing) * 16);
-  }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
   }
   .text-center {
     text-align: center;
-  }
-  .text-left {
-    text-align: left;
   }
   .font-primary {
     font-family: var(--font-primary);
@@ -515,9 +523,13 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -607,10 +619,6 @@
   .duration-200 {
     --tw-duration: 200ms;
     transition-duration: 200ms;
-  }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
   }
   .duration-700 {
     --tw-duration: 700ms;
@@ -809,9 +817,8 @@
 @font-face {
   font-family: "Arquitecta";
   font-style: normal;
-  font-weight: 200 700;
   font-display: swap;
-  font-size: 20px;
+  font-weight: 400;
   src: url("/src/assets/fonts/Arquitecta.woff2") format("woff2");
 }
 @property --tw-rotate-x {
