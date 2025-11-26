@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delta Ventures</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/assets/logos/dv-green-white-logo.svg"
+    />
+    <link rel="stylesheet" href="src/assets/styles/output.css" />
+  </head>
+  <body class="text-white bg-green-main">
+    <div class="step" id="step3">
+      <div class="step-indicator">Paso 3 de 4</div>
+      <h2>Cuéntanos Más Sobre Ti</h2>
+      <p class="subtitle">
+        Esta información nos ayudará a personalizar tu propuesta
+      </p>
+
+      <div class="form-card">
+        <form id="detailedForm">
+          <div class="form-group">
+            <label for="age">Edad *</label>
+            <select id="age" name="age" required>
+              <option value="">Selecciona tu rango de edad</option>
+              <option value="18-25">18-25 años</option>
+              <option value="26-35">26-35 años</option>
+              <option value="36-45">36-45 años</option>
+              <option value="46-55">46-55 años</option>
+              <option value="56+">56+ años</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Tipo de seguro de interés *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Selecciona una opción</option>
+              <option value="vida">Seguro de Vida</option>
+              <option value="salud">Seguro de Salud</option>
+              <option value="auto">Seguro de Auto</option>
+              <option value="hogar">Seguro de Hogar</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Presupuesto mensual aproximado *</label>
+            <select id="budget" name="budget" required>
+              <option value="">Selecciona un rango</option>
+              <option value="0-50">Menos de $50</option>
+              <option value="50-100">$50 - $100</option>
+              <option value="100-200">$100 - $200</option>
+              <option value="200+">Más de $200</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="urgency">¿Cuándo necesitas el seguro? *</label>
+            <select id="urgency" name="urgency" required>
+              <option value="">Selecciona una opción</option>
+              <option value="inmediato">Inmediatamente</option>
+              <option value="1mes">Dentro de 1 mes</option>
+              <option value="3meses">Dentro de 3 meses</option>
+              <option value="explorando">Solo estoy explorando</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Comentarios adicionales (opcional)</label>
+            <textarea
+              id="comments"
+              name="comments"
+              placeholder="¿Hay algo específico que quieras que sepamos?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">Ver Nuestros Productos</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

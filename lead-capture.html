@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delta Ventures</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/assets/logos/dv-green-white-logo.svg"
+    />
+    <link rel="stylesheet" href="src/assets/styles/output.css" />
+  </head>
+  <body class="text-white bg-green-main">
+    <div class="container">
+      <!-- Main Website Content -->
+      <div class="step-indicator">Paso 1 de 4</div>
+      <h1>¡Bienvenido!</h1>
+      <p class="subtitle">
+        Comienza completando tu información básica para acceder al contenido
+        exclusivo
+      </p>
+
+      <div class="form-card">
+        <form id="initialForm">
+          <div class="form-group">
+            <label for="name">Nombre completo *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <button type="submit" class="btn">Continuar al Video</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // No funnel logic needed on main page
+    </script>
+  </body>
+</html>
