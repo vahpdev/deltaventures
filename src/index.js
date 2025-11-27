@@ -63,3 +63,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+let currentStep = 1;
+
+function showStep(step) {
+  // Hide all steps
+  const steps = document.querySelectorAll(".step");
+  steps.forEach((s) => s.classList.add("hidden"));
+
+  // Show the requested step
+  const target = document.querySelector(`#step-${step}`);
+  if (target) {
+    target.classList.remove("hidden");
+    currentStep = step;
+  }
+}
+
+function nextStep(step) {
+  // If you always pass the target step, just show it
+  showStep(step);
+  // Here you can also:
+  // - validate the current form
+  // - send data via fetch()
+  // - scroll to top, etc.
+}
+
+function prevStep(step) {
+  showStep(step);
+}
+
+// Initialize on first step
+document.addEventListener("DOMContentLoaded", () => showStep(currentStep));
