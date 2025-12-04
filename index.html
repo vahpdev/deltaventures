@@ -11,9 +11,10 @@
     />
     <link rel="stylesheet" href="src/assets/styles/output.css" />
   </head>
-  <body class="text-white  bg-green-main">
+  <body class="text-white bg-green-main">
     <nav
-      class="bg-green-main/95 font-primary backdrop-blur-sm fixed top-0 right-0 left-0 z-50 p-3"
+      id="navbar"
+      class="bg-green-main/95 font-primary backdrop-blur-sm fixed top-0 right-0 left-0 transition-transform duration-400 transform-gpu z-50 p-3"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -121,7 +122,7 @@
     <div id="inicio" class="relative p-16">
       <div
         id="inicio-content"
-        class="flex flex-col place-items-center h-screen place-content-center gap-5 p-10 md:p-60"
+        class="flex flex-col place-items-center h-screen place-content-center gap-10 md:p-60"
       >
         <img
           src="/src/assets/logos/deltaventures-green-white.svg"
@@ -130,7 +131,7 @@
         />
         <a
           href="#contact"
-          class="bg-lime text-green-main px-6 py-3 rounded-full font-display hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md inline-block text-center"
+          class="bg-lime text-green-main font-primary text-2xl px-6 py-3 rounded-full font-display hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md inline-block text-center"
         >
           Trabajemos juntos
         </a>
@@ -138,15 +139,15 @@
     </div>
 
     <div
-      id="delta-boost""
+      id="delta-boost"
       class="flex flex-row-reverse md:flex-row bg-light-green w-full items-center p-10"
     >
       <div class="grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div class="w-full md:w-3/4 mx-auto font-display">          
+        <div class="w-full md:w-3/4 mx-auto font-display">
           <p class="font-primary md:text-left text-center text-3xl">
             <b>Emprender es un camino lleno de retos y responsabilidades.</b>
           </p>
-          <p class=" md:text-left text-center text-xl mt-4">
+          <p class="md:text-left text-center text-xl mt-4">
             En Delta Ventures, entendemos las dificultades que enfrentan los
             empresarios. Por eso, hemos creado una solución que te permitirá
             delegar las tareas administrativas y operativas de tu empresa a un
@@ -156,125 +157,125 @@
         </div>
         <div id="delta-boost-offering">
           <div class="flex flex-col place-items-center p-7 mb-7">
-            <img src="/src/assets/logos/DeltaBoostLogo.svg" alt="DeltaBoost" class="object-fit">
+            <img
+              src="/src/assets/logos/DeltaBoostLogo.svg"
+              alt="DeltaBoost"
+              class="object-fit"
+            />
           </div>
-          <div
-            class="bg-light-green max-w-5xl mx-auto p-7 shadow-2xl rounded-xl relative"
-          >
+          <div class="bg-light-green p-7 shadow-2xl rounded-xl relative">
             <div class="max-w-lg mx-auto">
-              <div>
-                <div class="flex flex-col items-center text-gray-900">
-                  <ul class="grid grid-cols-1 md:grid-cols-3 gap-7">
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+              <div class="flex flex-col items-center text-gray-900">
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                  <li class="text-2xl place-content-center">
+                    <div class="card md:w-100">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>Legal</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Trámites y contratos</h2>
-                          </div>
+                          <h2>Legal</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Trámites y contratos</h2>
                         </div>
                       </div>
-                    </li>
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+                    </div>
+                  </li>
+                  <li class="text-2xl place-content-center">
+                    <div class="card w-40">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>Contabilidad</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Contabilidad y impuestos</h2>
-                          </div>
+                          <h2>Contabilidad</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Contabilidad y impuestos</h2>
                         </div>
                       </div>
-                    </li>
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+                    </div>
+                  </li>
+                  <li class="text-2xl place-content-center">
+                    <div class="card w-40">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>RRHH</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Selección y liquidaciones</h2>
-                          </div>
+                          <h2>RRHH</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Selección y liquidaciones</h2>
                         </div>
                       </div>
-                    </li>
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+                    </div>
+                  </li>
+                  <li class="text-2xl place-content-center">
+                    <div class="card w-40">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>Operaciones</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Controles operativos trimestrales</h2>
-                          </div>
+                          <h2>Operaciones</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Controles operativos trimestrales</h2>
                         </div>
                       </div>
-                    </li>
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+                    </div>
+                  </li>
+                  <li class="text-2xl place-content-center">
+                    <div class="card w-40">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>Tecnología</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Asesoria y acompañamiento tecnológico</h2>
-                          </div>
+                          <h2>Tecnología</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Asesoria y acompañamiento tecnológico</h2>
                         </div>
                       </div>
-                    </li>
-                    <li class="flex flex-col text-2xl place-content-center">
-                      <div class="card w-40">
+                    </div>
+                  </li>
+                  <li class="text-2xl place-content-center">
+                    <div class="card w-40">
+                      <div
+                        class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                      >
                         <div
-                          class="card__content text-center relative p-20 transition-transform duration-700 hover:scale-110"
+                          class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md"
                         >
-                          <div
-                            class="card__front flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-white-gray shadow-md "
-                          >
-                            <h2>Estrategia</h2>
-                          </div>
-                          <div
-                            class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
-                          >
-                            <h2>Plan de negocio y seguimiento</h2>
-                          </div>
+                          <h2>Estrategia</h2>
+                        </div>
+                        <div
+                          class="card__back flex items-center justify-center absolute top-0 rounded-xl bottom-0 right-0 left-0 p-8 bg-orange-accent text-white text-lg"
+                        >
+                          <h2>Plan de negocio y seguimiento</h2>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

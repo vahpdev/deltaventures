@@ -94,3 +94,25 @@ function prevStep(step) {
 
 // Initialize on first step
 document.addEventListener("DOMContentLoaded", () => showStep(currentStep));
+
+let prevScrollPos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
+// Auto-hide Navbar on scroll
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.transform = "translateY(0)";
+  } else {
+    navbar.style.transform = "translateY(-100%)";
+  }
+  prevScrollPos = currentScrollPos;
+};
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
