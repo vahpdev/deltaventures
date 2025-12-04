@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const menuIcon = document.getElementById("menu-icon");
@@ -6,41 +6,113 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if elements exist before adding event listeners
   if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
-    mobileMenuButton.addEventListener("click", function () {
-      const isHidden = mobileMenu.classList.contains("hidden");
-
-      if (isHidden) {
-        // Open menu
-        mobileMenu.classList.remove("hidden");
-        menuIcon.classList.add("hidden");
-        closeIcon.classList.remove("hidden");
-      } else {
-        // Close menu
-        mobileMenu.classList.add("hidden");
-        menuIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
-      }
-    });
-
-    // Close menu when clicking outside (optional enhancement)
-    document.addEventListener("click", function (event) {
-      if (
-        !mobileMenuButton.contains(event.target) &&
-        !mobileMenu.contains(event.target)
-      ) {
-        mobileMenu.classList.add("hidden");
-        menuIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
-      }
-    });
-
-    // Close menu when pressing Escape key (optional enhancement)
-    document.addEventListener("keydown", function (event) {
+    // Keydown handler for Escape key
+    const handleEscape = (event) => {
       if (event.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.add("hidden");
-        menuIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
+        closeMenu();
+        document.removeEventListener("keydown", handleEscape);
+        document.removeEventListener("click", outsideClickListener);
+      }
+    };
+
+    // Outside click handler
+    let outsideClickListener = null;
+    const handleOutsideClick = (event) => {
+      if (
+        !mobileMenu.contains(event.target) &&
+        event.target !== mobileMenuButton &&
+        !menuIcon.contains(event.target) &&
+        !closeIcon.contains(event.target)
+      ) {
+        closeMenu();
+        document.removeEventListener("click", outsideClickListener);
+        document.removeEventListener("keydown", handleEscape);
+        outsideClickListener = null;
+      }
+    };
+
+    // Open menu function
+    const openMenu = () => {
+      mobileMenu.classList.remove("hidden");
+      menuIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
+      document.addEventListener("keydown", handleEscape);
+      outsideClickListener = handleOutsideClick;
+      document.addEventListener("click", outsideClickListener);
+    };
+
+    // Close menu function
+    const closeMenu = () => {
+      mobileMenu.classList.add("hidden");
+      menuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+      document.removeEventListener("keydown", handleEscape);
+      if (outsideClickListener) {
+        document.removeEventListener("click", outsideClickListener);
+        outsideClickListener = null;
+      }
+    };
+
+    mobileMenuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      if (isHidden) {
+        openMenu();
+      } else {
+        closeMenu();
       }
     });
   }
+});
+
+let currentStep = 1;
+
+function showStep(step) {
+  // Hide all steps
+  const steps = document.querySelectorAll(".step");
+  steps.forEach((s) => s.classList.add("hidden"));
+
+  // Show the requested step
+  const target = document.querySelector(`#step-${step}`);
+  if (target) {
+    target.classList.remove("hidden");
+    currentStep = step;
+  }
+}
+
+function nextStep(step) {
+  // If you always pass the target step, just show it
+  showStep(step);
+  // Here you can also:
+  // - validate the current form
+  // - send data via fetch()
+  // - scroll to top, etc.
+}
+
+function prevStep(step) {
+  showStep(step);
+}
+
+// Initialize on first step
+document.addEventListener("DOMContentLoaded", () => showStep(currentStep));
+
+let prevScrollPos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
+// Auto-hide Navbar on scroll
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.transform = "translateY(0)";
+  } else {
+    navbar.style.transform = "translateY(-100%)";
+  }
+  prevScrollPos = currentScrollPos;
+};
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
 });

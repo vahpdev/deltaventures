@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "deltaventures"
+  "liveServer.settings.multiRootWorkspaceName": "deltaventures",
+  "liveServer.settings.port": 5501
 }

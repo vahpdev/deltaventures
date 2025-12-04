@@ -1,1 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-green-main: oklch(0.3356 0.057 189.49);
+  --color-light-green: oklch(0.8285 0.0111 204.11 / 20%);
+  --color-lime: oklch(0.9093 0.245477 130.204);
+  --color-white-gray: oklch(0.9781 0.0158 110.55);
+  --color-light-gray: oklch(0.8106 0.0281 199.45);
+  --color-orange-accent: oklch(0.7 0.25 80);
+  --color-gray-accent: oklch(0.7734 0.0179 76.08);
+
+  --font-primary: "Arquitecta", sans-serif;
+  --font-secondary: "Rubik", sans-serif;
+}
+@layer components {
+  .card {
+    perspective: 800px;
+  }
+  .card__content {
+    transform-style: preserve-3d;
+  }
+  .card:hover .card__content {
+    transform: rotateY(0.5turn);
+  }
+
+  .card__front,
+  .card__back {
+    backface-visibility: hidden;
+  }
+  .card__back {
+    transform: rotateY(0.5turn);
+  }
+}
+
+@font-face {
+  font-family: "Arquitecta";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  /* use an absolute path from the site root so the file is served from /src/assets/fonts/ */
+  src: url("/src/assets/fonts/Arquitecta.woff2") format("woff2");
+}
