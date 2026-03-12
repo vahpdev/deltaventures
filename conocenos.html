@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delta Ventures</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/assets/logos/dv-green-white-logo.svg"
+    />
+    <link rel="stylesheet" href="src/assets/styles/output.css" />
+  </head>
+  <body class="text-white bg-green-main">
+    <nav
+      id="navbar"
+      class="bg-green-main/95 font-primary backdrop-blur-sm fixed top-0 right-0 left-0 transition-transform duration-400 transform-gpu z-50 p-3"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="shrink-0 flex items-center">
+            <a href="#inicio" class="flex items-center">
+              <img
+                src="/src/assets/logos/dv-green-white-logo.svg"
+                alt="Delta Ventures logo"
+                class="h-10 w-auto mr-3"
+              />
+            </a>
+          </div>
+
+          <div id="desktop-navigation" class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html#inicio"
+                class="text-white hover:text-lime px-3 py-2 text-xl font-display transition-colors duration-200"
+              >
+                Inicio
+              </a>
+
+              <a
+                href="index.html#delta-boost"
+                class="text-white hover:text-lime px-3 py-2 text-xl font-display transition-colors duration-200"
+              >
+                Delta Boost
+              </a>
+              <a
+                href="conocenos.html"
+                class="text-white/80 hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+              >
+                ¿Quienes somos?
+              </a>
+              <a
+                href=""
+                class="text-white/80 hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+              >
+                Delta Academy
+              </a>
+              <a
+                href="https://forms.gle/zTG2WKM4ctop22Py9"
+                class="bg-lime text-green-main px-6 py-3 rounded-full text-xl font-display hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                Trabajemos juntos
+              </a>
+            </div>
+          </div>
+
+          <div id="mobile-menu-button" class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-white/80 hover:text-white hover:bg-light-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime"
+            >
+              <span class="sr-only">Abrir menú principal</span>
+              <svg
+                id="menu-icon"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="close-icon"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html#inicio"
+            class="text-white hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+          >
+            Inicio
+          </a>
+          <a
+            href="index.html#delta-boost"
+            class="text-white/80 hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+          >
+            Delta Boost
+          </a>
+          <a
+            href="conocenos.html"
+            class="text-white/80 hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+          >
+            ¿Quienes somos?
+          </a>
+          <a
+            href=""
+            class="text-white/80 hover:text-lime block px-3 py-2 text-xl font-display transition-colors duration-200"
+          >
+            Delta Academy
+          </a>
+
+          <div class="px-3 py-4">
+            <a
+              href="https://forms.gle/zTG2WKM4ctop22Py9"
+              class="bg-lime text-green-main px-6 py-3 rounded-full text-xl font-display hover:bg-lime/90 transition-all duration-200 shadow-sm hover:shadow-md inline-block text-center"
+            >
+              Trabajemos juntos
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="inicio" class="relative p-16">
+      <div
+        id="inicio-content"
+        class="flex flex-col place-items-center h-screen place-content-center gap-10 md:p-60"
+      >
+        <!-- Sección 1 -->
+        <div id="seccion-1" class="bg-green-main w-full p-7 md:p-16 mt-20">
+          <div class="max-w-5xl mx-auto">
+            <h1
+              class="font-display text-3xl md:text-4xl font-bold text-lime mb-8"
+            >
+              Creemos que las empresas crecen cuando tienen estructura.
+            </h1>
+            <div
+              class="font-primary text-lg md:text-xl space-y-6 text-white/90"
+            >
+              <p>
+                Delta Ventures nació con una idea clara: ayudar a dueños de
+                empresas a transformar negocios que dependen completamente de
+                ellos, en organizaciones con estructura, dirección y capacidad
+                de crecer.
+              </p>
+              <p>
+                Muchos empresarios trabajan más de lo que deberían, toman todas
+                las decisiones y viven apagando fuegos todos los días. No porque
+                su empresa no funcione, sino porque nunca tuvieron el tiempo o
+                el acompañamiento adecuado para ordenar su negocio desde
+                adentro.
+              </p>
+              <p>
+                <strong>Ahí es donde entramos nosotros.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 2 -->
+        <div id="seccion-2" class="bg-light-green w-full p-7 md:p-16">
+          <div class="max-w-5xl mx-auto">
+            <h2
+              class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-8"
+            >
+              ¿Qué hacemos realmente?
+            </h2>
+            <div
+              class="font-primary text-lg md:text-xl space-y-6 text-gray-800"
+            >
+              <p>
+                <strong
+                  >Más que consultoría, es un acompañamiento real a empresas con
+                  potencial de crecimiento.</strong
+                >
+              </p>
+              <p>
+                Creemos que cuando una empresa se estructura bien, no solo
+                crece: también genera más oportunidades para su equipo, sus
+                clientes y su entorno.
+              </p>
+              <p>
+                Por eso, además de acompañar a las empresas en su crecimiento,
+                nuestra visión a largo plazo es construir un ecosistema donde
+                empresas bien estructuradas puedan crecer juntas y crear valor
+                sostenible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 3 -->
+        <div id="seccion-3" class="bg-green-main w-full p-7 md:p-16">
+          <div class="max-w-5xl mx-auto">
+            <h2
+              class="font-display text-3xl md:text-4xl font-bold text-lime mb-8"
+            >
+              ¿Quién está detrás de Delta Ventures?
+            </h2>
+            <div
+              class="font-primary text-lg md:text-xl space-y-6 text-white/90"
+            >
+              <p>
+                Delta Ventures fue fundada por
+                <strong>Julián Maldonado Viso</strong>, empresario y asesor de
+                empresas, con experiencia directa construyendo y operando
+                negocios en Venezuela por más de 12 años. Y cuenta con un equipo
+                de trabajo con amplia experiencia en sus áreas de trabajo que
+                son: Contabilidad, Legal, RRHH, Auditoría de operaciones y
+                Estrategia de negocios.
+              </p>
+              <p>
+                Durante más de cinco años, Julián lideró el crecimiento de una
+                organización que llegó a tener tres tiendas y más de cuarenta
+                empleados, una experiencia que le permitió vivir desde dentro
+                los retos reales de dirigir, estructurar y hacer crecer una
+                organización.
+              </p>
+              <p>
+                Esa etapa le dejó una convicción clara: muchos negocios tienen
+                el potencial para crecer mucho más, pero sus dueños terminan
+                atrapados en la operación diaria, sin tiempo ni estructura para
+                dirigir su empresa con claridad.
+              </p>
+              <p>
+                Delta Ventures nace precisamente para acompañar a esos
+                empresarios. No desde la teoría, sino desde la experiencia
+                práctica de haber estado en su lugar.
+              </p>
+              <p>
+                Hoy, Julián y su equipo trabajan directamente con dueños de
+                pequeñas y medianas empresas que ya venden, para ayudarlos a
+                ordenar sus operaciones, fortalecer sus equipos y construir
+                empresas capaces de crecer con estructura y dirección.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="flex flex-col bg-white-gray items-center">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:w-5xl gap-5 place-items-center p-3"
+        >
+          <div class="">
+            <img
+              src="/src/assets/logos/delta-ventures-dark.svg"
+              alt="Delta Ventures logo"
+              class="size-50"
+            />
+          </div>
+          <div class="text-gray-900 text-2xl font-primary hidden md:block">
+            <span class="">
+              Tu solución para estructurar, formalizar y crecer tu empresa
+            </span>
+          </div>
+          <div class="flex space-x-4 justify-center my-6">
+            <a
+              href="https://www.instagram.com/deltaventures.ve/"
+              target="_blank"
+              aria-label="Instagram"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-accent text-gray-900 shadow hover:shadow-lg transition-transform transform hover:scale-110"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8a4 4 0 0 1 3.37 3.37z" />
+                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/delta-ventures-ve/"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-accent text-gray-900 shadow hover:shadow-lg transition-transform transform hover:scale-110"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="5" cy="5" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
